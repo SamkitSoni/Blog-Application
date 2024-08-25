@@ -1,5 +1,5 @@
 {
-  "name": "ksingh08-medium-common",
+  "name": "@samkitsoni/packages_medium-common",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
