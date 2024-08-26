@@ -3,10 +3,8 @@ import { Avatar } from "./BlogCard"
 
 export const AppBar = () =>{
     return <div className="border-b flex justify-between px-5 py-3">
-        <Link to={'/blogs'}>
-        <div className="flex flex-col justify-center cursor-pointer">
+        <Link to={'/blogs'} className="flex flex-col justify-center cursor-pointer text-lg font-semibold">
             BlogApp
-        </div>
         </Link>
         <div>
             <Link to={'/publish'}>

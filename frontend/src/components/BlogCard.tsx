@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 interface BlogCardProps {
     authorName: string,
     title: string,
@@ -14,28 +16,30 @@ export const BlogCard = ({
     publishedDate
 
 }: BlogCardProps) => {
-    return <div className=" p-3 border-b border-slate-200 pb-4">
-        <div className="flex">
-            <div className="flex justify-center flex-col">
-                <Avatar name= {authorName} size={"small"} />
+    return <Link to={`/blog/${id}`}> 
+        <div className=" p-3 border-b border-slate-200 pb-4 w-screen max-w-screen-md cursor-pointer">
+            <div className="flex">
+                <div className="flex justify-center flex-col">
+                    <Avatar name= {authorName} size={"small"} />
+                </div>
+                <div className="font-extralight pl-2 capitalize flex justify-center flex-col">   
+                    {authorName} -
+                </div>
+                <div className="pl-1 font-thin text-slate-400 flex justify-center flex-col">
+                    {publishedDate}
+                </div>
             </div>
-            <div className="font-extralight pl-2 capitalize flex justify-center flex-col">   
-                {authorName} -
+            <div className="text-xl font-semibold pt-2">
+                {title}
             </div>
-            <div className="pl-1 font-thin text-slate-400 flex justify-center flex-col">
-                {publishedDate}
+            <div className="text-xl font-thin">
+                {content.slice(0,100) + "..."}
+            </div>
+            <div className="text-slate-500 text-sm font-thin pt-3">
+                {`${Math.ceil(content.length/100)} minute(s) read`}
             </div>
         </div>
-        <div className="text-xl font-semibold pt-2">
-            {title}
-        </div>
-        <div className="text-xl font-thin">
-            {content.slice(0,100) + "..."}
-        </div>
-        <div className="text-slate-500 text-sm font-thin pt-3">
-            {`${Math.ceil(content.length/100)} minute(s) read`}
-        </div>
-    </div>
+    </Link>
 }
 
 export function Avatar({ name, size = "small" }: { name: string, size?: "small" | "big" }) {

@@ -18,7 +18,7 @@ export const Auth = ({ type }: {type: "signup" | "signin"}) => {
             const token = response.data.jwt; 
             if (token) {
                 localStorage.setItem("token", token);
-                navigate("/blog");
+                navigate("/blogs");
             } else {
                 console.error("Token not found in response");
             }
