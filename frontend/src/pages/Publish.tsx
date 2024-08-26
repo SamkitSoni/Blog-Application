@@ -1,5 +1,5 @@
 import axios from "axios"
-import { AppBar } from "../components/Appbar"
+import { AppBar } from "../components/AppBar";
 import { BACKEND_URL } from "../config"
 import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";

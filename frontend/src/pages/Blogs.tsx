@@ -1,5 +1,5 @@
 "use client"
-import { AppBar } from "../components/Appbar"
+import { AppBar } from "../components/AppBar"
 import { BlogCard } from "../components/BlogCard"
 import { BlogSkeleton } from "../components/BlogSkeleton";
 import { useBlogs } from "../hooks";
